@@ -58,7 +58,7 @@ public class ChangeLanguage {
         WebElement trLanguage = driver.findElement(By.xpath("//*[@id=\"dropdown-animated\"]/li[6]/a"));
         trLanguage.click();
     }
-driver.close();
+
 
 }
 
