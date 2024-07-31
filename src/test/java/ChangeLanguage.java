@@ -25,6 +25,9 @@ public class ChangeLanguage {
         dropdown.click();
         WebElement esLanguage = driver.findElement(By.xpath("//*[@id=\"dropdown-animated\"]/li[3]"));
         esLanguage.click();
+        WebElement selectedLanguage = driver.findElement(By.xpath("//*[@id=\"language\"]"));
+        String expectedLanguage = "ES";
+        Assert.assertTrue(selectedLanguage.getText().contains(expectedLanguage));
     }
     @Test (priority = 2)
             public void changeLanguageTestDE() {
@@ -33,6 +36,9 @@ public class ChangeLanguage {
         dropdown.click();
         WebElement deLanguage = driver.findElement(By.xpath("//*[@id=\"dropdown-animated\"]/li[1]/a"));
         deLanguage.click();
+        WebElement selectedLanguage = driver.findElement(By.xpath("//*[@id=\"language\"]"));
+        String expectedLanguage = "DE";
+        Assert.assertTrue(selectedLanguage.getText().contains(expectedLanguage));
     }
     @Test (priority = 3)
     public void changeLanguageTestFR() {
@@ -41,6 +47,9 @@ public class ChangeLanguage {
         dropdown.click();
         WebElement frLanguage = driver.findElement(By.xpath("//*[@id=\"dropdown-animated\"]/li[4]/a"));
         frLanguage.click();
+        WebElement selectedLanguage = driver.findElement(By.xpath("//*[@id=\"language\"]"));
+        String expectedLanguage = "FR";
+        Assert.assertTrue(selectedLanguage.getText().contains(expectedLanguage));
     }
     @Test (priority = 4)
     public void changeLanguageTestNL(){
@@ -49,6 +58,9 @@ public class ChangeLanguage {
         dropdown.click();
         WebElement nlLanguage = driver.findElement(By.xpath("//*[@id=\"dropdown-animated\"]/li[5]/a"));
         nlLanguage.click();
+        WebElement selectedLanguage = driver.findElement(By.xpath("//*[@id=\"language\"]"));
+        String expectedLanguage = "NL";
+        Assert.assertTrue(selectedLanguage.getText().contains(expectedLanguage));
     }
     @Test (priority = 5)
     public void changeLanguageTestTR(){
@@ -57,6 +69,9 @@ public class ChangeLanguage {
         dropdown.click();
         WebElement trLanguage = driver.findElement(By.xpath("//*[@id=\"dropdown-animated\"]/li[6]/a"));
         trLanguage.click();
+        WebElement selectedLanguage = driver.findElement(By.xpath("//*[@id=\"language\"]"));
+        String expectedLanguage = "TR";
+        Assert.assertTrue(selectedLanguage.getText().contains(expectedLanguage));
     }
 
 }
