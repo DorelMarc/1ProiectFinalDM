@@ -18,7 +18,7 @@ public class ChangeLanguage {
         driver.manage().window().maximize();
 
     }
-    @Test
+    @Test (priority = 1)
     public void changeLanguageTestES() {
         //ES Language
         WebElement dropdown = driver.findElement(By.xpath("//*[@id=\"language\"]"));
@@ -26,7 +26,7 @@ public class ChangeLanguage {
         WebElement esLanguage = driver.findElement(By.xpath("//*[@id=\"dropdown-animated\"]/li[3]"));
         esLanguage.click();
     }
-    @Test
+    @Test (priority = 2)
             public void changeLanguageTestDE() {
         // DE Language
         WebElement dropdown = driver.findElement(By.xpath("//*[@id=\"language\"]"));
@@ -34,7 +34,7 @@ public class ChangeLanguage {
         WebElement deLanguage = driver.findElement(By.xpath("//*[@id=\"dropdown-animated\"]/li[1]/a"));
         deLanguage.click();
     }
-    @Test
+    @Test (priority = 3)
     public void changeLanguageTestFR() {
         // FR Language
         WebElement dropdown = driver.findElement(By.xpath("//*[@id=\"language\"]"));
@@ -42,7 +42,7 @@ public class ChangeLanguage {
         WebElement frLanguage = driver.findElement(By.xpath("//*[@id=\"dropdown-animated\"]/li[4]/a"));
         frLanguage.click();
     }
-    @Test
+    @Test (priority = 4)
     public void changeLanguageTestNL(){
         //NL Language
         WebElement dropdown = driver.findElement(By.xpath("//*[@id=\"language\"]"));
@@ -50,7 +50,7 @@ public class ChangeLanguage {
         WebElement nlLanguage = driver.findElement(By.xpath("//*[@id=\"dropdown-animated\"]/li[5]/a"));
         nlLanguage.click();
     }
-    @Test
+    @Test (priority = 5)
     public void changeLanguageTestTR(){
         // TR Language
         WebElement dropdown = driver.findElement(By.xpath("//*[@id=\"language\"]"));
@@ -59,6 +59,4 @@ public class ChangeLanguage {
         trLanguage.click();
     }
 
-
 }
-
