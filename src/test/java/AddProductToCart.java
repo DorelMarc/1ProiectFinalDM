@@ -45,6 +45,7 @@ public class AddProductToCart {
         wait3.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/app-root/div/app-checkout/aw-wizard/div/aw-wizard-step[1]/app-cart/div/table/tbody/tr/td[5]/a")));
         WebElement clearCart=driver.findElement(By.xpath("/html/body/app-root/div/app-checkout/aw-wizard/div/aw-wizard-step[1]/app-cart/div/table/tbody/tr/td[5]/a"));
         clearCart.click();
+        // Checking if cart is cleared
         Wait<WebDriver> wait2= new WebDriverWait(driver, Duration.ofSeconds(20));
         wait2.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id=\"lblCartCount\"]")));
         Assert.assertFalse(cartIcon.isDisplayed());
